@@ -1,4 +1,4 @@
-var SKYWAY_KEY='6e837f61-b5f8-4a01-aae5-bb21c54ca930';
+var SKYWAY_KEY='9a496dd9-0f6e-48ce-b8b5-7037607a9bf0';
 var ROOM_NAME='TEST';
 
 var msg=document.getElementById('msg');
