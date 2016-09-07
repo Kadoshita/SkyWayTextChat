@@ -7,14 +7,36 @@
 	<script src="https://skyway.io/dist/0.3/peer.min.js"></script>
 	<script src="https://skyway.io/dist/multiparty.min.js"></script>
 	<style type="text/css">
+		body{
+			font-size: 24px;
+		}
+		#come{
+			position: relative;
+			width: 100%;
+			height: 640px;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		#myvideo{
+			position: absolute;
+			top: 0px;
+			z-index: 9;
+		}
 	</style>
 </style>
 </head>
 <body>
-<span>送信メッセージ</span><br>
-<input type="text" name="msg" id="msg">
-<button onclick="send()">送信</button>
-<p id="messages"></p>
+<div id="send">
+	<span>送信メッセージ</span><br>
+	<input type="text" name="msg" id="msg">
+	<button onclick="send()">送信</button>
+	<p id="messages"></p>
+</div>
+<div id="view">
+	<div id="come"></div>
+	<video id="myvideo" autoplay></video>
+</div>
 </body>
 <script src="app.js"></script>
 </html>
