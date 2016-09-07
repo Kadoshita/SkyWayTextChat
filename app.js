@@ -51,7 +51,7 @@ function send(){
 	if(check()===true){
 		console.log(msg.value);
 		multiparty.send(msg.value);
-		messages.innerHTML='<li><small>'+getTime()+'</small><br><small>ME:'+msg.value+'</small></li>'+messages.innerHTML;
+		messages.innerHTML='<li><small>'+getTime()+'</small><br><small>ME:'+eschtml(msg.value)+'</small></li>'+messages.innerHTML;
 		msg.value='';
 	}
 }
@@ -68,6 +68,17 @@ function getTime() {
 	var date=new Date();
 	var time=date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
 	return time;
+}
+function eschtml(str) {
+	var eschtml_table={
+		'&': '&amp;',
+		'\'': '&quot;',
+		'<': '&lt;',
+		'>': '&gt;'
+	};
+	return str.replace(/[&'<>]/g, function(match) {
+		return eschtml_table[match];
+	});
 }
 function setmode(){
 	var url = document.location.href;
