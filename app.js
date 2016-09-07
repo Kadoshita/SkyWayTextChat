@@ -14,7 +14,9 @@ var i=0;
 var isView=false;
 
 setmode();
-startVideo();
+if(isView==true){
+	startVideo();
+}
 come.style.height=window.outerHeight+'px';
 myvideo.style.height=window.outerHeight+'px';
 myvideo.style.width=window.outerWidth+'px';
