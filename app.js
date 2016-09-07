@@ -50,7 +50,7 @@ multiparty.start();
 function send(){
 	if(check()===true){
 		console.log(msg.value);
-		multiparty.send(msg.value);
+		multiparty.send(eschtml(msg.value));
 		messages.innerHTML='<li><small>'+getTime()+'</small><br><small>ME:'+eschtml(msg.value)+'</small></li>'+messages.innerHTML;
 		msg.value='';
 	}
