@@ -17,9 +17,10 @@ setmode();
 if(isView==true){
 	startVideo();
 }
-come.style.height=window.outerHeight+'px';
-myvideo.style.height=window.outerHeight+'px';
-myvideo.style.width=window.outerWidth+'px';
+addcome(1,'test');
+come.style.height=(window.outerHeight-32)+'px';
+myvideo.style.height=(window.outerHeight-32)+'px';
+myvideo.style.width=(window.outerWidth-32)+'px';
 
 // MultiParty インスタンスを生成
 multiparty = new MultiParty( {
@@ -96,9 +97,9 @@ function setmode(){
 }
 
 function addcome(count,str){
-	$('#come').append('<marquee id=\'come'+count+'\''+
-		' loop=\'1\' scrolldelay=\'20\' scrollamount=\'8\' style=\'color:#fff;position: absolute;top:'+
-		getrand()+'px;z-index:10;text-shadow: 2px 2px 1px #000;\'>'+str+'</marquee>');
+	$('#come').append('<marquee id=\"come'+count+'\"'+
+		' loop=\"1\" scrolldelay=\"20\" scrollamount=\"8\" style=\"color:#fff;position: absolute;top:'+
+		getrand()+'px;z-index:10;text-shadow: 2px 2px 1px #000;font-size: 32px;\">'+str+'</marquee>');
 }
 
 function getrand() {
